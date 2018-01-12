@@ -1,0 +1,14 @@
+{
+  "name": "bluecoding",
+  "version": "1.0.0",
+  "description": "Test for php senior BlueCoding company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rangel Netto",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
