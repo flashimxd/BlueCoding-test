@@ -4,6 +4,7 @@
 ###### How to Use:
 Install via nodejs
  > npm install
+ Run using terminal
  > node index.js
 
 ###### Dependencys
