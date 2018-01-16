@@ -1,3 +1,9 @@
+/**
+ * Interpreter Class
+ * basic confirgurations
+ * @author Rangel Netto 
+ */
+
 module.exports = class Interpreter {
     
     constructor(step,answer){
@@ -5,22 +11,39 @@ module.exports = class Interpreter {
         this.answer = answer;
     }
 
+    /**
+     * set step
+     * @param {*} step 
+     */
     setStep(step){
         this.step = step;
     }
 
+    /**
+     * set Answer
+     * @param {*} answer 
+     */
     setAnswer(answer){
         this.answer = answer;
     }
 
+    /**
+     * return the step
+     */
     getStep(){
         return this.step;
     }
 
+    /**
+     * return the answer
+     */
     getAnswer(){
         return this.answer;
     }
 
+    /**
+     * Show the help text
+     */
     helpText(){
 
         if(this.getStep() === 0 ){
@@ -36,25 +59,20 @@ module.exports = class Interpreter {
         }
     }
 
+    /**
+     * Basic regex expression to test if the template is on the right format
+     * @param {*} string 
+     */
     checkFormat(string){
         let toTest = string[0];
-        //<head><title></title></head>
-        /*TODO
-        checar se todas as tags abertas foram fechadas
-        checar se o numero de tags respeita o tamanho do source code
-         */
-         let reS = /^</;
-         let reE = />$/;
-         let regExp = /(<.[^(><.)]+>)/g;
+        let reS = /^</;
+        let reE = />$/;
+        let regExp = /(<.[^(><.)]+>)/g;
 
-         if(!reS || !reE || !regExp){
+        if(!reS.test(toTest) || !reE.test(toTest) || !regExp.test(toTest)){
             return false;
-         }else{
-             return true;
-         }
-    }
-
-    StartHRML(){
-
+        }else{
+            return true;
+        }
     }
 }
